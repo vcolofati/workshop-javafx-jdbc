@@ -2,6 +2,7 @@
 
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
@@ -11,9 +12,9 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<AnchorPane prefHeight="188.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SellerFormController">
+<AnchorPane prefHeight="222.0" prefWidth="633.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.SellerFormController">
    <children>
-      <GridPane layoutX="62.0" layoutY="113.0" prefHeight="147.0" prefWidth="549.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
+      <GridPane layoutX="62.0" layoutY="113.0" prefHeight="180.0" prefWidth="549.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="20.0">
         <columnConstraints>
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="177.0" minWidth="10.0" prefWidth="90.0" />
           <ColumnConstraints hgrow="SOMETIMES" maxWidth="291.0" minWidth="10.0" prefWidth="229.0" />
@@ -25,6 +26,7 @@
             <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
           <RowConstraints maxHeight="34.0" minHeight="10.0" prefHeight="34.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
@@ -33,7 +35,7 @@
             <TextField fx:id="txtId" editable="false" GridPane.columnIndex="1" />
             <TextField fx:id="txtName" GridPane.columnIndex="1" GridPane.rowIndex="1" />
             <Label fx:id="labelErrorName" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-            <HBox prefHeight="50.0" prefWidth="237.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <HBox prefHeight="50.0" prefWidth="237.0" spacing="5.0" GridPane.columnIndex="1" GridPane.rowIndex="6">
                <children>
                   <Button fx:id="btnSave" mnemonicParsing="false" onAction="#onBtnSaveAction" text="Save" />
                   <Button fx:id="btnCancel" mnemonicParsing="false" onAction="#onBtnCancelAction" text="Cancel" />
@@ -51,6 +53,8 @@
             <Label fx:id="labelErrorBirthDate" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="3" />
             <Label fx:id="labelErrorBaseSalary" textFill="RED" GridPane.columnIndex="2" GridPane.rowIndex="4" />
             <DatePicker fx:id="dpBirthDate" prefHeight="24.0" prefWidth="250.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+            <Label text="Department" GridPane.rowIndex="5" />
+            <ComboBox fx:id="comboBoxDepartment" prefHeight="24.0" prefWidth="243.0" GridPane.columnIndex="1" GridPane.rowIndex="5" />
          </children>
       </GridPane>
    </children>
